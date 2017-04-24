@@ -11,22 +11,26 @@
 	<h2>Sign in to GitHub</h2>
 </header>
 
-<input id="username" type="text" name="Utilsateur">Username or email address</input>
+<form>
+<label for="username">Username or email address</label>
+<input id="username" type="text" name="Utilsateur"></input>
 
-<input id="mdp" type="text" name="Password">Password</input>
+<label for="mdp">Password</label>
+<input id="mdp" type="password" name="Password"></input>
 <a href="">Forgot password?</a>
 
-<button id="button">Sign In </button>
 
+<button id="button">Sign In </button>
 <p>New to GitHub? <a href="">Create an account.</a></p>
 
+</form>
 
 <footer>
-   <ul>
-      <li><a href="#">Terms</a></li>
-      <li><a href="#">Privacy</a></li>
-      <li><a href="#">Security</a></li>
-      <li><a href="#">Contact GitHub</a></li>
+   
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Security</a>
+      <a href="#">Contact GitHub</a>
 </footer>
 
 <script src="node_modules/jquery/dist/jquery.js"></script>
