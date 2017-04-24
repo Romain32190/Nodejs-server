@@ -1,11 +1,33 @@
 var express = require('express');
-var app = express();
+var bodyParser = require('body-parser');
 
-app.get('/', function (req, res){
-	res.send('Hello world!');
-});
+
+var app = express();
+var user={
+	username : "Pierre",
+	mdp : "paul-jacques"
+}
+
+app.use(bodyParser.urlencoded());
+app.use(express.static('public'));
+
 
 app.listen(3300, function(){
 	console.log('App listening on port 3300');
 
+});
+
+
+app.post('/login', function(req, res) {
+	
+	
+		if( user.username === req.body.username && user.mdp === req.body.mdp){
+			res.send({redirect: 'account.html'});
+
+		}else{
+			res.send("Problème d'identification!");
+			console.log(res);
+		}
+
+	
 });
